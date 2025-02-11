@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>CoT-Report-Viewer</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            img {
+                width: 100%;
+                height: auto;
+            }
+            pre {
+                background-color: #f4f4f4;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                overflow-x: auto;
+                white-space: pre-wrap;
+                line-height: 0.75; 
+                text-align: left; /* Aligns text to the left */
+            }
+            code {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 0.75em;
+                text-align: left; 
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+                <!-- Header -->
+        <div id="header">
+
+            <div class="top">
+        
+                <!-- Logo -->
+                <div id="logo">
+                    <span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+                    <h1 id="title">Michael McGee</h1>
+                    <p>Data Analyst</p>
+                </div>
+        
+                <div class="bottom">
+        
+                    <!-- Social Icons -->
+                    <ul class="icons">
+                        <li><a href="https://www.linkedin.com/in/mcgeeajr" class="icon brands fa-linkedin" target="_blank" rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/modest-melody" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
+                        <li><a href="mailto:mcgee.ajr@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                    </ul>
+      
+                </div>
+        
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
+                        <li><a href="index.html#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+                        <li><a href="index.html#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+                        <li><a href="index.html#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+                    </ul>
+                </nav>
+        
+            </div>
+        
+        </div>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Project -->
+            <section class="two">
+                <div class="container">
+
+                    <header>
+                        <h2>CFTC CoT Report Viewer</h2>
+                        <h4><i>R, Shiny, gt, tidyverse, data.table</i></h4>
+                    </header>
+
+                    <h4>Application:</h4>
+                    <p>This Shiny application provides an interactive way to view the weekly Commitments of Traders (CoT) published by the Commodity Futures Trading Commission (CFTC). Users can select different markets, along with a date range, to explore historical and most recent CoT data. The application displays this information in an easy-to-read table, enhanced by color coding and detailed descriptions of each data column.</p>
+
+                    <h4>Process:</h4>
+                    <p>Aggregated data from CFTC reports, cleaned and preprocessed it using reproducible R scripts. Created dynamic report tables with the gt package and integrated them into a Shiny app for enhanced interactivity. Overcame challenges related to the gt package’s newness by thoroughly studying its documentation.</p>
+
+                    <img src="images/cot-report.jpg" alt="cot-report" />
+
+                    <h2>Installation</h2>
+                    <p>To run this application locally, follow these steps:</p>
+                    <ol>
+                        <li>Install R from the <a href="https://cran.r-project.org" target="_blank">Comprehensive R Archive Network (CRAN)</a>.</li>
+                        <li>Install necessary R packages. Run the following commands in your R console:</li>
+                    </ol>
+                    <pre><code>R # this starts interactive R shell
+
+required_packages &lt;- c("tidyverse", "readxl", "data.table", "vroom", "gt", "shiny")
+
+install.packages(required_packages)
+
+q() # exits R shell
+</code></pre>
+                    <p><strong>Currently supports R 4.3.3</strong></p>
+
+                    <h2>Running the App</h2>
+                    <p>Clone the repository and run the app through your terminal after installing the above requirements.</p>
+
+                    <h4>From Terminal</h4>
+                    <pre><code>git clone https://github.com/modest-melody/CoT-Report-Viewer.git
+
+cd CoT-Report-Viewer/Legacy-NonCom
+
+R -e "shiny::runApp('non_commercial_app.R')"
+</code></pre>
+                    <p>Bring the server and port # to your browser.</p>
+
+                    <a href="https://github.com/modest-melody/CoT-Report-Viewer" class="button">View Project on GitHub</a>
+
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+
+            <div class="container">
+                <!-- Contact Info -->
+                <section>
+                    <header>
+                        <h2>Contact Me</h2>
+                    </header>
+                    <ul class="contact">
+                        <p>
+                            <a href="tel:+13862164243" class="icon solid fa-phone" target="_blank" rel="noopener noreferrer">
+                              (386)-216-4243
+                            </a>
+                            &nbsp;&nbsp;&nbsp;
+                            <a href="mailto:mcgee.ajr@gmail.com" class="icon solid fa-envelope" target="_blank" rel="noopener noreferrer">
+                                mcgee.ajr@gmail.com
+                            </a>
+                          </p>
+                    </ul>
+                </section>
+
+                <!-- Social Icons -->
+                <section>
+                    <ul class="icons">
+                        <li><a href="https://github.com/modest-melody" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/mcgeeajr" class="icon brands fa-linkedin" target="_blank" rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </section>
+
+                <!-- Quick Navigation -->
+                <section>
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#about">About Me</a></li>
+                    </ul>
+                </section>
+
+                <!-- Quote -->
+                <section>
+                    <p>"Passionate about turning data into actionable insights."</p>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
